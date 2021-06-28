@@ -17,7 +17,7 @@ include 'connection.php';
 <div class="container">
 <form action="" method= "POST">
 
-        <table border="1px">
+        <table border= "1px" style = "width:100%">
         <tr>
         <th>Practice Number</th>
          <th>Name</th>
@@ -55,17 +55,16 @@ include 'connection.php';
            {
              ?>
             <tr>
-             </tr>
-            <td><?php echo $row['practice_number'] ?></td>
-              <td><?php echo $row['name'] ?></td>
+               <td><?php echo $row['practice_number'] ?></td>
+               <td><?php echo $row['name'] ?></td>
                <td><?php echo $row['specialty'] ?></td>
                <td><?php echo $row['fee'] ?></td>
              </tr>
          <?php
             } 
-          }elseif($doctor =='DoctorsSelected')
-          {
-              $fees =$_POST['fee'];
+          } elseif($doctor =='DoctorsSelected')
+           {
+            $fees =$_POST['fee'];
 
             $query = "SELECT * FROM `doctors` WHERE fee < '$fees' ";
             $result = mysqli_query($connection,$query);
@@ -74,7 +73,6 @@ include 'connection.php';
              {
             ?>
               <tr>
-               </tr>
               <td><?php echo $row['practice_number'] ?></td>
                 <td><?php echo $row['name'] ?></td>
                  <td><?php echo $row['specialty'] ?></td>
