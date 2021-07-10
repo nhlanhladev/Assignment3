@@ -23,8 +23,6 @@
 
  <?php
 
-
-  // 
      $studentName = $_GET["studentname"];
      $numOfModulesReg = $_GET["numofregmodules"];
      $busaryAmt = $_GET["busaryamt"];

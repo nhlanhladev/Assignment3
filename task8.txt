@@ -22,12 +22,8 @@ $string = " All:for:one:and:one:for:all".'<br>';
 // Replaced function 
 $my_str = 'All for one and one for all'.'<br>';
  // Display replaced string
-echo "A and a replaced by : ".str_ireplace("A", "*", $my_str);
+echo str_ireplace("A", "*", $my_str);
 
-
-//Last letters in lowercase
-$my_str = 'All for one and one for all'.'<br>';
-echo "Last letters in lowercase: ".strtolower("LREDERL"). "<br> ";
 
 // echo uppercase statement
 echo "Uppercase words: ". strtoupper("All for one and one for all"). "<br>";
@@ -41,17 +37,9 @@ $new_str = str_replace(' ', '', $str);
 echo "Uppercase words without spaces:  ". $new_str  . "<br>"; 
 
 //Convert the first character of each word to uppercase:
-echo "First letters in uppercase: ".ucwords("hello world") . "<br>";
-
-
-//First letters in uppercase
-$str = 'All For One And One For All';
-echo "First letters in uppercase: ".strtoupper("afoaofa");
-
+echo "First letters in uppercase: ".ucwords("hello world");
  ?>
  
- <iframe src="task3.txt" height="400" width="1200">
-    Your browser does not support iframes. </iframe>
 
  </body>
 

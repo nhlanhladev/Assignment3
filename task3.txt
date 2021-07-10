@@ -37,7 +37,7 @@
 
   $totalBMI = ($enterWeight /($enterHeight * $enterHeight));
 
-  $bmi = (($enterWeight) *  0.453/($enterHeight * $enterHeight) * 0.025);
+  $bmi = $enterWeight *  0.453/($enterHeight * $enterHeight) * 0.025;
 
 
    $message = "";
@@ -55,7 +55,7 @@
     echo "PLEASE HEIGHT AND WEIGHT  FIELDS SHOULD NOT BE ZERO DIGITS OR STRING OR EMPTY";
 }
 
-if($_POST['radioBMI'] == '1'){
+if($_POST['radioBMI'] == 1){
 
    if($totalBMI < 18.5){
     $message = " you are underweight";
@@ -73,7 +73,8 @@ if($_POST['radioBMI'] == '1'){
     echo "your body mass is index(BMI): ". round($totalBMI,2) . "<br> " . $message;
    }
 
-  }elseif($_POST['radioBMI'] == '2'){
+  }
+  if($_POST['radioBMI'] == 2){
    
     if($bmi < 18.5){
       $message = "you are underweight";
@@ -95,8 +96,8 @@ if($_POST['radioBMI'] == '1'){
 
  ?>
 
-<iframe src="task3.txt" height="400" width="1200">
-    Your browser does not support iframes. </iframe>
+
+ 
  
  </body>
 </html>
